@@ -19,7 +19,7 @@ class BugsController < ApplicationController
     if @bug.save
       redirect_to bugs_path(@bug)
     else
-      render bugs_new_path
+      render :new
     end
   end
 
