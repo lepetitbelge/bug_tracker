@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root to: 'pages#home'
 
-  resources :bugs, only: [:index, :show]
+  resources :bugs, only: [:index, :new, :show, :create]
   # resources :cocktails do
   #     resources :doses, only: [:new, :create]
   #   end
