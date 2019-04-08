@@ -34,7 +34,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise'
 
 # Using bootstrap and jquery to make website better looking
-gem 'bootstrap'
+gem 'bootstrap', '~> 4.2.0'
 gem 'jquery-rails'
 
 # Reduces boot times through caching; required in config/boot.rb
