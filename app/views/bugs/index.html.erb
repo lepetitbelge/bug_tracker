@@ -2,7 +2,7 @@
 
 <ul>
   <% @bugs.each do |bug| %>
-    <li><%= "#{bug.title} | #{bug.description}" %></li>
+    <li><%= "#{bug.title} | #{bug.description} | #{bug.state}" %></li>
   <% end %>
 
 </ul>

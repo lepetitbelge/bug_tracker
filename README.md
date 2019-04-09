@@ -21,7 +21,7 @@
 ## Bug
    - [X] A bug has a title and description
    - [X] A bug has a user as its owner, and can be assigned to the same or other users
-   - [ ] A bug can have a state (eg. open, assigned, closed)
+   - [X] A bug can have a state (eg. open, assigned, closed)
 ## Bonus
   Some nice to haves, when there is time to spare.
 
