@@ -1,15 +1,15 @@
 <div class="container">
   <div class="row">
-    <div class="col-sm-8 col-sm-offset-4">
+    <div class="col-sm-6 offset-sm-3">
       <h2>Hi, sign up here</h2>
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
         <%= render "devise/shared/error_messages", resource: resource %>
-
+        </br>
         <div class="field">
           <%= f.label :email %><br />
           <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
         </div>
-
+        </br>
         <div class="field">
           <%= f.label :password %>
           <% if @minimum_password_length %>
@@ -17,7 +17,7 @@
           <% end %><br />
           <%= f.password_field :password, autocomplete: "new-password" %>
         </div>
-
+        </br>
         <div class="field">
           <%= f.label :password_confirmation %><br />
           <%= f.password_field :password_confirmation, autocomplete: "new-password" %>

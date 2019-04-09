@@ -14,7 +14,7 @@ class BugsController < ApplicationController
 
   def create
     @bug = Bug.new(bug_params)
-    # @bug.user = current_user
+    @bug.user = current_user
     @bug.save
     if @bug.save
       redirect_to bugs_path(@bug)
