@@ -1,0 +1,8 @@
+<h1>A list of all bugs</h1>
+
+<ul>
+  <% @bugs.each do |bug| %>
+    <li><%= "#{bug.title} | #{bug.description} | #{bug.state}" %></li>
+  <% end %>
+
+</ul>
