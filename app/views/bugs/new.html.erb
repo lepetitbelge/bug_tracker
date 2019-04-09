@@ -8,7 +8,7 @@
   <%= f.text_field :description %>
 
   <%= "Assign to" %>
-  <%= f.association :user, label_method: :full_name %>
+  <%= f.collection_select :user, User.order(:username),:id,:email, include_blank: true %>
 
   <%= f.submit %>
 <% end %>
