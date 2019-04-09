@@ -14,6 +14,7 @@ class BugsController < ApplicationController
 
   def create
     @bug = Bug.new(bug_params)
+    # @fix = Fix.new
     @bug.user = current_user
     @bug.save
     if @bug.save

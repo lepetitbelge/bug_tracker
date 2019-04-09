@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_08_131010) do
+ActiveRecord::Schema.define(version: 2019_04_09_083323) do
 
   create_table "bugs", force: :cascade do |t|
     t.string "title"
@@ -18,6 +18,15 @@ ActiveRecord::Schema.define(version: 2019_04_08_131010) do
     t.string "state"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "fixes", force: :cascade do |t|
+    t.integer "bug_id"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["bug_id"], name: "index_fixes_on_bug_id"
+    t.index ["user_id"], name: "index_fixes_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
