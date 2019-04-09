@@ -30,6 +30,12 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# Use dotenv for storing passkeys
+gem 'dotenv-rails', groups: [:development, :test]
+
+# Use cloudinary for storing photos
+gem 'cloudinary', '~> 1.9.1'
+
 # Use devise to create user account
 gem 'devise'
 

@@ -1,14 +1,21 @@
-<h1>Found a bug? Add it here</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h1>Found a bug? Add it here</h1>
 
-<%= form_for(@bug) do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
+      <%= form_for(@bug) do |f| %>
+      <%= f.label :title %>
+      <%= f.text_field :title %>
 
-  <%= f.label :description %>
-  <%= f.text_field :description %>
+      <%= f.label :description %>
+      <%= f.text_field :description %>
 
-  <%= "Assign to" %>
-  <%= f.collection_select :user, User.order(:username),:id,:email, include_blank: true %>
+      <%= "Assign to" %>
+      <%= f.collection_select :user, User.order(:username),:id,:email, include_blank: true %>
 
-  <%= f.submit %>
-<% end %>
+      <%= f.submit %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
