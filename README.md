@@ -1,6 +1,14 @@
 # Study Advisor - test
 ## Setup
-  - tbc
+  - Go to this website: https://bugtracker3000.herokuapp.com/
+  - First create an account -> sign up button on navbar
+  - Then go to landing page and choose whether you want to add a bug or have an overview
+  - So you can add bugs via 'report a bug' and give a title, description and assign it to someone
+  - On the overview page you already see some bug examples that I have made -> mostly suggestions for the website ;)
+  - You may delete them or mark them as done
+  - And that's it in a nutshell
+  - It was good experience working on this and I already see a lot of room for improvement and I'm sure you will too, but we'll talk about that during the debrief -> thank you for your time Pablo!
+
 ## Guidelines
   - Fork this repository
   - You can add any framework, library or plugin you'd like
@@ -30,28 +38,4 @@
    - [ ] Add roles (eg. admin, dev, support)
    - [ ] A user with admin role can add/remove users
    - [ ] Add an auto-save feature that saves the entry of a bug every 10 seconds
-   - [ ] Add or improve a feature of your own choice
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+   - [X] Add or improve a feature of your own choice
