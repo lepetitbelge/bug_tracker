@@ -25,8 +25,13 @@ class BugsController < ApplicationController
   end
 
   def update
-    @bug.update(state_done(@bug))
-    redirect_to bugs_path(@bug)
+    state_done(@bug)
+    @bug.save
+    if @bug.save
+      redirect_to bugs_path(@bug)
+    else
+      render :new
+    end
   end
 
   def destroy
@@ -54,7 +59,7 @@ class BugsController < ApplicationController
     end
   end
 
-  def state_done
-    @bug.state = 'done'
+  def state_done(bug)
+    bug.state = 'done'
   end
 end
