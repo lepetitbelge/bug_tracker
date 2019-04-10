@@ -8,7 +8,7 @@
         <%= "#{bug.title} | #{bug.state} "%>
         <% if bug.state == 'done' %>
         <% else %>
-          <%= link_to bug_path(bug), method: :patch, data: {confirm: 'Are you sure?'} do %>
+          <%= link_to bug_path(bug), method: :patch do %>
             <div class="bug-card-action">
               <i class="fas fa-check-square"></i>
               <p>Done</p>
