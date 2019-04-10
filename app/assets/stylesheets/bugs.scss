@@ -2,3 +2,34 @@ h1 {
   margin-top: 50px;
   margin-bottom: 20px;
 }
+.cards {
+  max-width: 500px;
+  list-style-type: none;
+}
+.bug-card {
+  background-color: rgba(148, 81, 127,0.6);
+  border-radius: 3px;
+  height: 80px;
+  margin: 20px 10px;
+  padding: 5px 10px;
+  a {
+    text-decoration: none;
+  }
+}
+.bug-card-text {
+  display: inline-block;
+}
+.bug-card-action {
+  display: inline-block;
+  text-decoration: none;
+  color: rgba(0,0,0,1);
+  p {
+    display: inline-block;
+  }
+  &:hover {
+    color: white;
+  }
+}
+.bug-card-text {
+  color: white;
+}

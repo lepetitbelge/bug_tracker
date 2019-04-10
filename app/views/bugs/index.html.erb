@@ -1,8 +1,39 @@
-<h1>A list of all bugs</h1>
 
-<ul>
-  <% @bugs.each do |bug| %>
-    <li><%= "#{bug.title} | #{bug.description} | #{bug.state}" %></li>
-  <% end %>
 
-</ul>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h1>A list of all bugs</h1>
+      <div class="cards">
+        <% @bugs.each do |bug| %>
+        <li>
+          <div class="bug-card">
+            <div class="bug-card-text">
+              <%= "#{bug.title} | #{bug.state} | "%>
+              <% if bug.state == 'done' %>
+              <% else %>
+                <%= link_to bug_path(bug), method: :patch do %>
+                  <div class="bug-card-action">
+                    <i class="fas fa-check-square"></i>
+                    <p>Done</p>
+                  </div>
+                <% end %>
+              <% end %>
+              <%= link_to bug_path(bug), method: :delete, data: {confirm: 'Are you sure?'} do %>
+                <div class="bug-card-action">
+                  <i class="fas fa-trash-alt"></i>
+                  <p>Delete</p>
+                </div>
+              <% end %>
+            </div>
+            <p><%= bug.description %></p>
+            </div>
+        </li>
+        <% end %>
+      </div>
+      <div class="btn btn-danger button-text">
+        <%= link_to 'Report a bug!', '/bugs/new' %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,5 +1,5 @@
 class BugsController < ApplicationController
-  before_action :find_bug, only: [:show]
+  before_action :find_bug, only: %i[show update destroy]
 
   def index
     @bugs = Bug.all
@@ -24,6 +24,21 @@ class BugsController < ApplicationController
     end
   end
 
+  def update
+    state_done(@bug)
+    @bug.save
+    if @bug.save
+      redirect_to bugs_path(@bug)
+    else
+      render :new
+    end
+  end
+
+  def destroy
+    @bug.destroy
+    redirect_to bugs_path
+  end
+
   private
 
   def bug_params
@@ -31,7 +46,7 @@ class BugsController < ApplicationController
   end
 
   def find_bug
-    @bug = Job.find(params[:id])
+    @bug = Bug.find(params[:id])
   end
 
   def determine_state(params)
@@ -42,5 +57,9 @@ class BugsController < ApplicationController
     else
       @bug.state = 'open'
     end
+  end
+
+  def state_done(bug)
+    bug.state = 'done'
   end
 end
